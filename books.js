@@ -36,6 +36,13 @@ function renderbooks() {
         `;
     })
     .join("");
-
-  
+    const removebtn = document.querySelectorAll(".remove-btn");
+    removebtn.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            booksData = booksData.filter((a, index) => {
+                return index !== parseInt(e.target.id);
+            });
+        renderbooks();
+        });
+    });
 }
