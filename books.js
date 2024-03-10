@@ -59,14 +59,78 @@ class books {
       });
     });
 
-    if (this.booksData.length === 0) {
-      document.querySelector(".books-added").style.display = "none";
-      document.querySelector(".end-line").style.display = "none";
-    } else {
-      document.querySelector(".books-added").style.display = "block";
-      document.querySelector(".end-line").style.display = "block";
-    }
+    this.booksAdded.style.display = this.booksData.length === 0 ? "none" : "block";
+    document.querySelector(".end-line").style.display = this.booksData.length === 0 ? "none" : "block";
   }
 }
 
 const muneeb = new books();
+
+// class Books {
+//     constructor() {
+//       this.booksData = [];
+//       this.addBookForm = document.querySelector(".add-books");
+//       this.booksAdded = document.querySelector(".books-added");
+  
+//       this.addBookForm.addEventListener("submit", (e) => {
+//         e.preventDefault();
+//         const titleInput = this.addBookForm.querySelector(
+//           'input[type="text"][placeholder="Title"]'
+//         );
+//         const authorInput = this.addBookForm.querySelector(
+//           'input[type="text"][placeholder="Author"]'
+//         );
+//         const title = titleInput.value;
+//         const author = authorInput.value;
+  
+//         if (title.trim() !== "" && author.trim() !== "") {
+//           this.addBooks(title, author);
+//           titleInput.value = "";
+//           authorInput.value = "";
+//         }
+//       });
+  
+//       this.booksAdded.addEventListener("click", (e) => {
+//         if (e.target.classList.contains("remove-btn")) {
+//           const index = parseInt(e.target.dataset.index);
+//           this.removeBook(index);
+//         }
+//       });
+//     }
+  
+//     addBooks(title, author) {
+//       const newBook = {
+//         title: title,
+//         author: author,
+//       };
+//       this.booksData.push(newBook);
+//       this.renderBooks();
+//     }
+  
+//     removeBook(index) {
+//       this.booksData = this.booksData.filter((book, i) => i !== index);
+//       this.renderBooks();
+//     }
+  
+//     renderBooks() {
+//       this.booksAdded.innerHTML = this.booksData
+//         .map((bookData, index) => {
+//           return `
+//           <div class="books">
+//               <div class="title-author">
+//                   <p class="title">${bookData.title}</p>
+//                   <p>by</p>
+//                   <p class="author">${bookData.author}</p>
+//               </div>
+//               <button class="remove-btn" data-index="${index}">remove</button>
+//           </div>`;
+//         })
+//         .join("");
+  
+//       this.booksAdded.style.display = this.booksData.length === 0 ? "none" : "block";
+//       document.querySelector(".end-line").style.display = this.booksData.length === 0 ? "none" : "block";
+//     }
+//   }
+  
+//   const myBooks = new Books();
+  
