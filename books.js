@@ -1,3 +1,6 @@
+
+
+
 class books {
   constructor() {
     this.booksData = [];
@@ -60,77 +63,94 @@ class books {
     });
 
     this.booksAdded.style.display = this.booksData.length === 0 ? "none" : "block";
-    document.querySelector(".end-line").style.display = this.booksData.length === 0 ? "none" : "block";
   }
 }
 
 const muneeb = new books();
 
-// class Books {
-//     constructor() {
-//       this.booksData = [];
-//       this.addBookForm = document.querySelector(".add-books");
-//       this.booksAdded = document.querySelector(".books-added");
+const listlink = document.querySelector(".list-link");
+const addlink = document.querySelector(".add-link");
+const contactlink = document.querySelector(".contact-link");
+const addsection = document.querySelector(".add-section");
+const hero = document.querySelector(".hero");
+const booksAdded = document.querySelector(".books-added");
+const contactsection = document.querySelector(".contact-section");
+
+listlink.addEventListener("click", () => {
+
+  if (booksAdded.innerHTML === "") {
+    booksAdded.innerHTML = `<h1 class="empty">"There are currently no books added."</h1>`
+  }
+
+  if (addsection.classList.contains("hide")) {
+    addsection.classList.remove("show");
+  } else {
+    addsection.classList.remove("show");
+    addsection.classList.add("hide");
+  }
   
-//       this.addBookForm.addEventListener("submit", (e) => {
-//         e.preventDefault();
-//         const titleInput = this.addBookForm.querySelector(
-//           'input[type="text"][placeholder="Title"]'
-//         );
-//         const authorInput = this.addBookForm.querySelector(
-//           'input[type="text"][placeholder="Author"]'
-//         );
-//         const title = titleInput.value;
-//         const author = authorInput.value;
-  
-//         if (title.trim() !== "" && author.trim() !== "") {
-//           this.addBooks(title, author);
-//           titleInput.value = "";
-//           authorInput.value = "";
-//         }
-//       });
-  
-//       this.booksAdded.addEventListener("click", (e) => {
-//         if (e.target.classList.contains("remove-btn")) {
-//           const index = parseInt(e.target.dataset.index);
-//           this.removeBook(index);
-//         }
-//       });
-//     }
-  
-//     addBooks(title, author) {
-//       const newBook = {
-//         title: title,
-//         author: author,
-//       };
-//       this.booksData.push(newBook);
-//       this.renderBooks();
-//     }
-  
-//     removeBook(index) {
-//       this.booksData = this.booksData.filter((book, i) => i !== index);
-//       this.renderBooks();
-//     }
-  
-//     renderBooks() {
-//       this.booksAdded.innerHTML = this.booksData
-//         .map((bookData, index) => {
-//           return `
-//           <div class="books">
-//               <div class="title-author">
-//                   <p class="title">${bookData.title}</p>
-//                   <p>by</p>
-//                   <p class="author">${bookData.author}</p>
-//               </div>
-//               <button class="remove-btn" data-index="${index}">remove</button>
-//           </div>`;
-//         })
-//         .join("");
-  
-//       this.booksAdded.style.display = this.booksData.length === 0 ? "none" : "block";
-//       document.querySelector(".end-line").style.display = this.booksData.length === 0 ? "none" : "block";
-//     }
-//   }
-  
-//   const myBooks = new Books();
-  
+  if (hero.classList.contains("show")) {
+    hero.classList.remove("hide");
+  } else {
+    hero.classList.remove("hide")
+    hero.classList.add("show");
+  }
+
+  if(contactsection.classList.contains("hide")){
+    contactsection.classList.remove("show") 
+  } else {
+    contactsection.classList.remove("show")
+    contactsection.classList.add("hide")
+  }
+});
+
+
+contactlink.addEventListener("click", () => {
+  if (contactsection.classList.contains("show")) {
+    contactsection.classList.remove("hide");
+  } else {
+    contactsection.classList.remove("hide");
+    contactsection.classList.add("show");
+  }
+
+  if (addsection.classList.contains("hide")) {
+    addsection.classList.remove("show");
+  } else {
+    addsection.classList.remove("show");
+    addsection.classList.add("hide");
+  }
+
+  if (hero.classList.contains("hide")) {
+    hero.classList.remove("show");
+  } else {
+    hero.classList.remove("show");
+    hero.classList.add("hide");
+  }
+});
+
+addlink.addEventListener("click", () => {
+
+  if (contactsection.classList.contains("hide")) {
+    contactsection.classList.remove("show");
+  } else {
+    contactsection.classList.remove("show");
+    contactsection.classList.add("hide");
+  }
+
+  if (addsection.classList.contains("hide")) {
+    addsection.classList.remove("hide");
+    addsection.classList.remove("show");
+  } else {
+    addsection.classList.remove("hide");
+    addsection.classList.remove("show");
+  }
+
+  if (hero.classList.contains("hide")){
+    hero.classList.remove("show")
+  } else {
+    hero.classList.remove("show")
+    hero.classList.add("hide");
+  }
+});
+
+
