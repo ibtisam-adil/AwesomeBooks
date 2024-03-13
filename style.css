@@ -1,4 +1,3 @@
-
 /* BODY */
 body {
   padding: 2rem;
@@ -11,7 +10,7 @@ nav {
   border: 2px solid;
   align-items: center;
   padding: 1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .nav-links {
@@ -25,6 +24,15 @@ nav {
 
 .nav-p a {
   font-size: 1.5rem;
+}
+
+/* DATE TIME */
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* MAIN_CONTENT_WRAPPER */
@@ -145,13 +153,9 @@ footer {
   padding: 0 1.5rem;
 }
 
-/* SHOW/HIDE CLASSES */
+/* HIDE CLASS */
 .hide {
   display: none;
-}
-
-.show {
-  display: block;
 }
 
 /* MEDIA QUERIES */

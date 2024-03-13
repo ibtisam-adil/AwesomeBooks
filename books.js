@@ -1,6 +1,3 @@
-
-
-
 class books {
   constructor() {
     this.booksData = [];
@@ -62,7 +59,8 @@ class books {
       });
     });
 
-    this.booksAdded.style.display = this.booksData.length === 0 ? "none" : "block";
+    this.booksAdded.style.display =
+      this.booksData.length === 0 ? "none" : "block";
   }
 }
 
@@ -77,80 +75,63 @@ const booksAdded = document.querySelector(".books-added");
 const contactsection = document.querySelector(".contact-section");
 
 listlink.addEventListener("click", () => {
-
   if (booksAdded.innerHTML === "") {
-    booksAdded.innerHTML = `<h1 class="empty">"There are currently no books added."</h1>`
+    booksAdded.innerHTML = (
+      `<h1 class="empty">"There are currently no books added."</h1>`
+    );
   }
-
-  if (addsection.classList.contains("hide")) {
-    addsection.classList.remove("show");
-  } else {
-    addsection.classList.remove("show");
-    addsection.classList.add("hide");
-  }
-  
-  if (hero.classList.contains("show")) {
-    hero.classList.remove("hide");
-  } else {
-    hero.classList.remove("hide")
-    hero.classList.add("show");
-  }
-
-  if(contactsection.classList.contains("hide")){
-    contactsection.classList.remove("show") 
-  } else {
-    contactsection.classList.remove("show")
-    contactsection.classList.add("hide")
-  }
+  hero.classList.remove("hide");
+  addsection.classList.add("hide");
+  contactsection.classList.add("hide");
 });
 
-
 contactlink.addEventListener("click", () => {
-  if (contactsection.classList.contains("show")) {
-    contactsection.classList.remove("hide");
-  } else {
-    contactsection.classList.remove("hide");
-    contactsection.classList.add("show");
-  }
-
-  if (addsection.classList.contains("hide")) {
-    addsection.classList.remove("show");
-  } else {
-    addsection.classList.remove("show");
-    addsection.classList.add("hide");
-  }
-
-  if (hero.classList.contains("hide")) {
-    hero.classList.remove("show");
-  } else {
-    hero.classList.remove("show");
-    hero.classList.add("hide");
-  }
+  addsection.classList.add("hide");
+  hero.classList.add("hide");
+  contactsection.classList.remove("hide");
 });
 
 addlink.addEventListener("click", () => {
-
-  if (contactsection.classList.contains("hide")) {
-    contactsection.classList.remove("show");
-  } else {
-    contactsection.classList.remove("show");
-    contactsection.classList.add("hide");
-  }
-
-  if (addsection.classList.contains("hide")) {
-    addsection.classList.remove("hide");
-    addsection.classList.remove("show");
-  } else {
-    addsection.classList.remove("hide");
-    addsection.classList.remove("show");
-  }
-
-  if (hero.classList.contains("hide")){
-    hero.classList.remove("show")
-  } else {
-    hero.classList.remove("show")
-    hero.classList.add("hide");
-  }
+  contactsection.classList.add("hide");
+  hero.classList.add("hide");
+  addsection.classList.remove("hide");
 });
 
+
+const dateElement = document.getElementById("date");
+
+let currentTime = new Date();
+
+let month = currentTime.toLocaleString("default", { month: "long" });
+let date = currentTime.getDate();
+let year = currentTime.getFullYear();
+
+function displaydate() {
+  dateElement.innerHTML = `
+    <span>${month}</span>
+    <span>${date}</span>
+    <span>${year}</span>
+  `;
+}
+displaydate();
+
+const timeElement = document.getElementById("time");
+
+let hours = currentTime.getHours();
+let minutes = currentTime.getMinutes();
+let seconds = currentTime.getSeconds();
+
+let ampm = hours >= 12 ? "PM" : "AM";
+hours = hours % 12;
+hours = hours ? hours : 12;
+
+function displayTime() {
+  timeElement.innerHTML = `
+    <span>${hours} :</span>
+    <span>${minutes} :</span>
+    <span>${seconds}</span>
+    <span>${ampm}</span>
+  `;
+}
+displayTime();
 
