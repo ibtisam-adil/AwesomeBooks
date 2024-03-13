@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +8,63 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="hero">
-        <h1 class="main-h">Awesome books</h1>
-        <div class="books-added"></div>
-    </section>
-    <section class="books">
-        <form class="add-books">
-            <input type="text" placeholder="Title">
-            <input type="text" placeholder="Author">
-            <button type="submit" class="add-btn">add</button>
-        </form>
-    </section>
+    <nav class="nav">
+        <div class="nav-p">
+            <a>Awesome Books</a>
+        </div>
+        <div class="nav-links">
+            <a class="list-link" href="#">List</a>
+            <a class="add-link" href="#">Add new</a>
+            <a class="contact-link" href="#">Contact</a>
+        </div>
+    </nav>
+    <div class="date-time">
+        <div id="date"></div>
+        <p>-</p>
+        <div id="time"></div>
+    </div>
+
+    <div class="main-content-container">
+        <div class="main-content">
+            <section class="hero hide">
+                <h1 class="main-h">All Awesome books</h1>
+                <div class="books-added"></div>
+            </section>
+        
+            <section class="add-section">
+                <h1 class="main-h">Add new books</h1>
+                <form class="add-books">
+                    <div class="input">
+                        <input type="text" placeholder="Title" required>
+                        <input type="text" placeholder="Author" required>
+                    </div>
+                    <div class="btn ">
+                        <button type="submit" class="add-btn">add</button>
+                    </div>
+                </form>
+            </section>
+        
+            <section class="contact-section hide">
+                <div class="contact">
+                    <h1 class="main-h">Contact Information</h1>
+                    <div class="info">
+                        <p> Do you have any questions or you just want to say "hello"?
+                        <br>
+                        you can reach out to us!</p>
+                        <ul>
+                            <li>our email: demo@mail.com</li>
+                            <li>our phone: 0303111111</li>
+                            <li>our address: Bhimber</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <p>Copyright @ibtisam-adil</p>
+        </footer>
+    </div>
+    
     
     <script type="module" src="books.js"></script>
 </body>
