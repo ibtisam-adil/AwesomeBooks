@@ -1,50 +1,182 @@
+/* BODY */
+body {
+  padding: 2rem;
+}
 
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.nav-p a {
+  font-size: 1.5rem;
+}
+
+/* DATE TIME */
+.date-time {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* MAIN_CONTENT_WRAPPER */
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 73vh; 
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+}
 
 /* HERO */
 .main-h {
+  text-align: center;
   font-size: 3.5rem;
   padding-bottom: 2rem;
   margin: 0;
 }
 
-.books-added p {
-    margin: 0;
-  font-size: 2.5rem;
+.books-added {
+  border: 3.5px solid;
+  width: 100%;
+}
+
+.books-added > *:nth-child(even) {
+  background-color: lightgray;
+}
+
+.books {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px;
+}
+
+.title-author {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.books p {
+  margin: 0;
+  font-size: 2.2rem;
 }
 
 .remove-btn {
-    font-size: 1.5rem;
-    padding: .5rem;
-    width: 6rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 6rem;
+  border-radius: 5px;
+}
+
+.btn {
+  margin-left: 6rem;
+  display: flex;
+  justify-content: end;
 }
 
 .add-btn {
-    font-size: 1.5rem;
-    padding: .5rem;
-    width: 6rem;
-    display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width: 6rem;
 }
-
-.end-line {
-    margin-top: 18px;
-    border: 1px solid;
-    color: #ccc;
-}
-
 
 /* ADD BOOKS */
-.books {
-    margin-top: 3rem;
+.add-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.books input {
-    width: 9rem;
-    padding: .5rem;
-    text-align: center;
+.add-section input {
+  padding: 0.5rem;
+  margin-bottom: 1.2rem;
+  width: 70vw;
 }
 
-.add-books {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* CONTACT  */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  margin: 0.5rem;
+  font-size: 1.7rem;
+}
+
+li {
+  font-size: 1.4rem;
+}
+
+/* COPYRIGHT */
+footer {
+  border: 2px solid;
+  padding: 0 1.5rem;
+}
+
+/* HIDE CLASS */
+.hide {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .nav-p a {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .main-h {
+    font-size: 2.2rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+  }
 }
