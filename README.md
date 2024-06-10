@@ -26,7 +26,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Protfolio-project] <a name="about-project"></a>
+# 📖 [Awesome-Books] <a name="about-project"></a>
 
 In this project I create Awesome books which add and remove book and preserve it in local storage with the help of javascript es6 in which i use javascript classes ,arrow functions and use let and const variables.
 
@@ -54,7 +54,7 @@ In this project I create Awesome books which add and remove book and preserve it
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="protfolio-project"></a>
+## 🚀 Live Demo <a name="Awesome Books"></a>
  
 https://awesomebooksv1.netlify.app
 
@@ -131,7 +131,7 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-"Special thanks to my coding partner "Chris Mutugi " for their invaluable contributions to this project. Their dedication, skills, and collaborative spirit were essential to our success."
+"Special thanks to my coding partner "Muneeb ur Rehman" for their invaluable contributions to this project. Their dedication, skills, and collaborative spirit were essential to our success."
 
 
 <!-- LICENSE -->
